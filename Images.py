@@ -22,7 +22,7 @@ label.pack()
 
 nomimage = Tk.Label(text="Exemplepourlecodinggoûter.jpg")
 
-# Il faut ajouter les boutons :
+# Ajouter les boutons :
 bouton_quitter = Tk.Button(root, text="✖ Quitter", fg="red", command=root.quit)
 bouton_quitter.pack(side="left")
 bouton_cliquer = Tk.Button(root, text="Suivant →", fg="green",command=suivant)
