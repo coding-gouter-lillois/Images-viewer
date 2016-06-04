@@ -2,30 +2,30 @@ from PIL import Image, ImageTk ## Importation des modules utiles dans PIL
 import  tkinter as Tk
 
 def suivant():
-	if nomimage["text"]=="Exemplepourlecodinggoûter.jpg":
+	if nomimage["text"]=="Exemplepourlecodinggouter.jpg":
 		nomimage["text"] = "img2.jpg"
 	else:
-		nomimage["text"] = "Exemplepourlecodinggoûter.jpg"
+		nomimage["text"] = "Exemplepourlecodinggouter.jpg"
 	monimage = Image.open(nomimage["text"])
 	photo = ImageTk.PhotoImage(monimage)
-	label["image"] = photo    ## Insertion de l'image
-	label.image = photo 			## Maintient en vie de photo dans un objet non détruit par le garbage
+	label["image"] = photo
+	label.image = photo
 
 root = Tk.Tk()
-monimage = Image.open("Exemplepourlecodinggoûter.jpg")    ## Chargement d'une image à partir de PIL
-photo = ImageTk.PhotoImage(monimage)   ## Création d'une image compatible Tkinter
+monimage = Image.open("Exemplepourlecodinggouter.jpg")
+photo = ImageTk.PhotoImage(monimage)
 
-label = Tk.Label(image=photo)    ## Insertion de l'image
-label.image = photo 			## Maintient en vie de photo dans un objet non détruit par le garbage
-								## pour pas que l'image disparaisse du label
+label = Tk.Label(image=photo)
+label.image = photo
+
 label.pack()
 
-nomimage = Tk.Label(text="Exemplepourlecodinggoûter.jpg")
+nomimage = Tk.Label(text="Exemplepourlecodinggouter.jpg")
 
 # Ajouter les boutons :
-bouton_quitter = Tk.Button(root, text="✖ Quitter", fg="red", command=root.quit)
-bouton_quitter.pack(side="left")
-bouton_cliquer = Tk.Button(root, text="Suivant →", fg="green",command=suivant)
+bouton_quitter = Tk.Button(root, text="x Quitter", fg="red", command=root.quit)
+bouton_quitter.pack(side="center")
+bouton_cliquer = Tk.Button(root, text="Suivant ->", fg="green", command=suivant)
 bouton_cliquer.pack(side="right")
 
 root.mainloop()
