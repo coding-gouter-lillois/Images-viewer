@@ -1,5 +1,9 @@
+#!/usr/bin/python
 from PIL import Image, ImageTk ## Importation des modules utiles dans PIL
-import  tkinter as Tk
+try:
+    import Tkinter as Tk
+except ImportError:
+    import tkinter as Tk
 
 def suivant():
 	if nomimage["text"]=="Example.jpg":
