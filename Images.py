@@ -10,14 +10,14 @@ def suivant():
 		nomimage["text"] = "Doudou.jpg"
 	else:
 		nomimage["text"] = "Example.jpg"
-	monimage = Image.open(nomimage["text"])
-	photo = ImageTk.PhotoImage(monimage)
+	mon_image = Image.open(nomimage["text"])
+	photo = ImageTk.PhotoImage(mon_image)
 	label["image"] = photo
 	label.image = photo
 
 root = Tk.Tk()
-monimage = Image.open("Example.jpg")
-photo = ImageTk.PhotoImage(monimage)
+mon_image = Image.open("Example.jpg")
+photo = ImageTk.PhotoImage(mon_image)
 
 label = Tk.Label(image=photo)
 label.image = photo
